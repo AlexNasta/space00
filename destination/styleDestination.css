@@ -1,0 +1,356 @@
+.containerDest {
+  align-items: center;
+  background: url(../imgs/backgrounds/destination/background-destination-desktop.jpg);
+}
+
+.heroDest {
+  margin-top: 100px;
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*  align-items: center; */
+}
+.introText {
+  display: flex;
+  width: 100%;
+  position: relative;
+  left: 167px;
+}
+.introText h4 {
+  opacity: 0.25;
+  margin-right: 28px;
+}
+.introText h4,
+.introText h3 {
+  font-size: 28px;
+  letter-spacing: 4.8px;
+}
+.imgPlanet img {
+  margin-top: 33px;
+  width: 445px;
+  height: 445px;
+  animation: img 2s ease-in;
+}
+
+.currentPlanet {
+  display: flex;
+  top: 64px;
+  position: relative;
+  left: 230px;
+}
+
+.planetSide {
+  position: relative;
+  left: 157px;
+  /* width: 444px; */
+}
+
+.allPlanets {
+  display: flex;
+  gap: 35px;
+}
+.allPlanets a {
+  text-decoration: none;
+  position: relative;
+}
+
+.allPlanets a::after {
+  position: absolute;
+  content: "";
+  height: 97%;
+  width: 100%;
+  border-top-width: 0px;
+  border-top-color: rgba(255, 255, 255, 0.5);
+}
+.allPlanets a:hover::after {
+  border-top-style: solid;
+  padding-top: -3px;
+  border-top-width: 3px;
+  transition: all 0.5s ease-in;
+}
+.allPlanets a h4 {
+  padding-bottom: 12px;
+  color: #d0d6f9;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+}
+
+.allPlanets a h4 :hover {
+  color: #d0d6f9;
+}
+
+.planetInfos h2 {
+  margin-top: 37px;
+  font-size: 100px;
+}
+.nome {
+  animation: destra 0.4s ease;
+}
+.planetInfos h5 {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 33px;
+  max-width: 444px;
+  padding-bottom: 55px;
+  border-bottom: 1px solid #383b4b;
+}
+.descr {
+  animation: destra 0.6s ease;
+}
+@keyframes destra {
+  0% {
+    flex-wrap: wrap;
+    margin-left: 1000px;
+    opacity: 0;
+    position: relative;
+  }
+  /*   50%{
+    margin-left: 1000px;
+  } */
+
+  80% {
+    opacity: 0.7;
+    margin-left: -10%;
+  }
+
+  100% {
+    position: relative;
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes img {
+  0% {
+    opacity: 0;
+  }
+  /*   50%{
+    margin-left: 1000px;
+  } */
+
+  80% {
+/*     opacity: 0.7;
+    rotate: 180deg; */
+  }
+
+  100% {
+ /*    position: relative; */
+    opacity: 1;
+    /*  margin-left: 0; */
+  }
+}
+.travel {
+  display: flex;
+  margin-top: 28px;
+  animation: sali 1s ease;
+}
+
+.travel h4 {
+  font-size: 14px;
+  letter-spacing: 2.4px;
+  color: #d0d6f9;
+  /* color: red; */
+  font-weight: 400;
+}
+.travel h2 {
+  margin-top: 12px;
+  font-size: 28px;
+  letter-spacing: 2.4px;
+  font-weight: 400;
+  letter-spacing: auto;
+}
+
+.time {
+  margin-left: 79px;
+}
+@keyframes sali {
+  0% {
+    margin-top: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    /*  margin-top: 0; */
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    display: flex;
+  }
+  .heroDest {
+    margin-top: 0;
+  }
+  .currentPlanet {
+    left: auto;
+    width: 100%;
+    flex-direction: column;
+    top: 60px;
+  }
+  .imgPlanet img {
+    width: 300px;
+    height: 300px;
+    margin-top: 0;
+    left: 234px;
+    position: relative;
+  }
+  .container {
+    background-size: contain;
+    background: url(../imgs/backgrounds/destination/background-destination-tablet.jpg);
+    width: 768px;
+    height: 1024px;
+  }
+
+  .heroDest {
+    top: 136px;
+  }
+  .introText {
+    left: 38px;
+  }
+  .introText h4 {
+    margin-right: 19px;
+  }
+  .introText h4,
+  .introText h3 {
+    font-size: 20px;
+  }
+  .planetSide {
+    margin-inline: 97px;
+    top: 53px;
+    left: 0;
+  }
+
+  .allPlanets {
+    justify-content: center;
+  }
+
+  .planetInfos h2 {
+    margin-top: 32px;
+    font-size: 80px;
+    text-align: center;
+    line-height: 92px;
+  }
+  .planetInfos h5 {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    max-width: 573px;
+    padding-bottom: 49px;
+    color: #d0d6f9;
+  }
+  .travel {
+    margin-top: 29px;
+    justify-content: center;
+  }
+
+  .travel h4 {
+    font-size: 14px;
+    line-height: 17px;
+    justify-content: center;
+  }
+  .travel h2 {
+    margin-top: 12px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .time {
+    margin-left: 65px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    background-size: cover;
+    background: url(../imgs/backgrounds/destination/background-destination-mobile.jpg);
+    width: 376px;
+    max-height: 850px;
+  }
+  .heroDest {
+    top: 48px;
+  }
+  .introText {
+    left: 77.5px;
+  }
+
+  .introText h4 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .introText h3 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+
+  .currentPlanet {
+    top: 32px;
+  }
+  .imgPlanet img {
+    width: 170px;
+    height: 170px;
+    left: 104px;
+  }
+
+  .planetSide {
+    top: 21px;
+    margin-inline: auto;
+    justify-content: inherit;
+  }
+
+  .allPlanets {
+    justify-content: inherit;
+    gap: 26px;
+    left: 70px;
+    position: relative;
+  }
+
+  .allPlanets a h4 {
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+
+  .planetInfos h2 {
+    position: relative;
+    font-size: 56px;
+    margin-top: 20px;
+    text-align: start;
+    line-height: 64px;
+    /* left:95px; */
+    text-align: center;
+  }
+  .planetInfos h5 {
+    margin-top: 1px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 327px;
+    margin-inline: 24px;
+    padding-bottom: 32px;
+  }
+
+  .travel {
+    margin-top: 32px;
+    flex-direction: column;
+  }
+
+  .travel h4 {
+    font-size: 14px;
+  }
+  .travel h2 {
+    line-height: 32px;
+    margin-top: 12px;
+    font-size: 28px;
+    left: auto;
+    text-align: center;
+  }
+
+  .time {
+    margin-top: 32px;
+    margin-left: 0;
+  }
+}

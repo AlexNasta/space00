@@ -1,0 +1,188 @@
+.navbar {
+  position:absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 40px;
+  height: 96px;
+  width: 1385px;
+  margin-left: 55px;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  width: 48px;
+}
+
+.string {
+  z-index: 2;
+  position: absolute;
+  width: 473px;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.25;
+  left: 112px;
+}
+
+.hambMenu {
+  display: none;
+}
+.closeMenu {
+  display: none;
+}
+.navMenu {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  width: 830px;
+  display: flex;
+  height: 100%;
+  gap: 50px;
+}
+
+.primo {
+  margin-left: 123px;
+}
+
+.navOpt {
+  position: relative;
+ /*  margin-bottom: -1px; */
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  border-bottom-color: #fff;
+ /*  z-index: 30; */
+}
+
+.navOpt::after{
+  position: absolute;
+  content: '';
+  height: 98%;
+  width: 100%;
+  border-bottom-width: 0px;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+ 
+}
+
+.navOpt:hover::after{
+  border-bottom-style: solid;
+  padding-bottom: -3px;
+  border-bottom-width: 3px;
+  transition: all .5s ease-in;
+}
+
+.navOpt a {
+  display: flex;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  color: white;
+  align-items: center;
+}
+
+.navOpt a h3 {
+  margin-left: 11px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 39px;
+    width: 729px;
+  }
+  .string {
+    display: none;
+  }
+  .navMenu {
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .primo {
+    margin: 0;
+  }
+
+  .navOpt {
+    height: 96px;
+  }
+
+  .navOpt a {
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navOpt a h4 {
+    display: none;
+  }
+  .navOpt a h3 {
+    margin-left: 0;
+    margin-inline: 5px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .logo {
+    width: 40px;
+  }
+  .navbar {
+    position: sticky;
+    top: 24px;
+    height: 40px;
+    width: 335px;
+    left: 20px;
+    z-index: 2;
+  }
+
+  .hambMenu {
+    display: flex;
+    width: 24px;
+  }
+
+  .closeMenu {
+    display: flex;
+    position: relative;
+    margin-inline: 209px 26px;
+  }
+
+  .sparisci {
+    display: none;
+  }
+  .navMenu {
+    position: absolute;
+    overflow: hidden;
+    right: -20px;
+    top: -25px;
+    /* width: 255px; */
+    max-width: 0;
+    height: 900px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-top: 35px;
+    gap: 0;
+    transition: max-width 0.2s ease-in;
+  }
+
+  .apri {
+    max-width: 255px;
+  }
+
+  .primo {
+    margin-top: 65px;
+  }
+  .navOpt {
+    width: 100%;
+    padding-left: 32px;
+    margin-bottom: 32px;
+    height: auto;
+    border-bottom-color:transparent ;
+  }
+  .navOpt a h4{
+    display: flex;
+  }
+}

@@ -1,0 +1,230 @@
+.container {
+  background: url(../imgs/home/background-home-desktop.jpg);
+}
+
+.home {
+  margin-top: 100px;
+  left: 165px;
+  top: 290px;
+  height: 382px;
+  position: relative;
+  display: flex;
+}
+
+.textHome {
+  width: 450px;
+}
+.textHome h2 {
+  margin-top: 24px;
+  font-size: 150px;
+  margin-bottom: 24px;
+  animation: scendi 0.6s ease-in;
+}
+.textHome h3 {
+  font-size: 28px;
+  letter-spacing: 4.8px;
+  color: #d0d6f9;
+  animation: scendi 0.3s ease-in;
+}
+
+.textHome h5 {
+  line-height: 32px;
+  animation: scendi 1s ease-in;
+}
+@keyframes scendi {
+  0% {
+    width: 444px;
+    position: absolute;
+    bottom: -100%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  80% {
+    bottom: 5%;
+  }
+  100% {
+    position: relative;
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes img {
+  0% {
+    opacity: 0;
+  }
+  /*   50%{
+    margin-left: 1000px;
+  } */
+
+  80% {
+    /*     opacity: 0.7;
+    rotate: 180deg; */
+  }
+
+  100% {
+    /*    position: relative; */
+    opacity: 1;
+    /*  margin-left: 0; */
+  }
+}
+.explore {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 274px;
+  height: 274px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 385px;
+  position: relative;
+  bottom: -110px;
+  z-index: 30;
+  animation: img 1.3s ease-in;
+}
+.explore::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.explore:hover::after {
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 88px rgb(255, 255, 255, 0.1);
+  transition: all 0.5s ease-in;
+}
+
+.explore a {
+  position: relative;
+  text-decoration: none;
+}
+.explore a h2 {
+  font-size: 32px;
+  letter-spacing: 2px;
+
+  color: #0b0d17;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background: url(../imgs/home/background-home-tablet.jpg);
+  }
+
+  .home {
+    margin-top: 0;
+    top: 202px;
+    flex-direction: column;
+    left: auto;
+    align-items: center;
+  }
+
+  .textHome h2,
+  .textHome h3,
+  .textHome h5 {
+    text-align: center;
+    animation: none;
+  }
+
+  @keyframes destra {
+    0% {
+      position: relative;
+      right: -100%;
+      opacity: 0;
+      
+    }
+/*     50% {
+      right: -100%;
+    } */
+    80% {
+      opacity: 0.7;
+      right: 5%;
+    }
+
+    100% {
+     /*  position: relative; */
+      opacity: 1;
+      right: 0;
+    }
+  }
+  .textHome h3 {
+    font-size: 20px;
+    letter-spacing: 3.4px;
+    animation: destra 0.4s ease-in;
+  }
+
+  .textHome h2 {
+    line-height: 150px;
+    animation: destra 0.6s ease-in;
+  }
+  .textHome h5 {
+    width: 445px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 16px;
+    animation: destra 1s ease-in;
+  }
+  .homeExplore {
+    width: 100%;
+  }
+
+  .explore {
+    width: 242px;
+    height: 242px;
+    margin-top: 155px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .explore a h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    background: url(../imgs/home/background-home-mobile.jpg);
+    max-height: 667px;
+  }
+
+  .home {
+    top: 72px;
+    height: auto;
+    width: auto;
+  }
+
+  .textHome {
+    width: auto;
+  }
+  .textHome h3 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    padding-inline: 55px;
+  }
+  .textHome h5 {
+    width: 327px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .textHome h2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .explore {
+    width: 150px;
+    height: 150px;
+    margin-top: 80px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .explore a h2 {
+    font-size: 20px;
+  }
+}
